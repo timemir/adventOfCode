@@ -21,8 +21,14 @@ function findElfWithMaxCalories(input) {
         (sum) => sum === Math.max(...elvesAsSums)
     );
 
-    // return the max value
-    return elvesAsSums[maxIndex];
+    // return the max value, the index of the max value, and a message
+    return [
+        elvesAsSums[maxIndex],
+        maxIndex + 1,
+        `Elf ${maxIndex + 1} has the most calories with ${
+            elvesAsSums[maxIndex]
+        }.`,
+    ];
 }
 
 console.log(findElfWithMaxCalories(input));
